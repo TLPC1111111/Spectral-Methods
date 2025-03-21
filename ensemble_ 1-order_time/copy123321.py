@@ -118,7 +118,7 @@ class SpectralMethods:
         return np.array(u)
 
     def error_func(self , t , x , y , p , q , random_coff):
-        true_val = self.true_func(t , x , y , p , q , self.mean_coeff)
+        true_val = self.true_func(t, x, y, p, q, self.mean_coeff)
         ensemble_u = np.mean(self.ensamble_u(t , x , y , p , q) , axis = 0)
         return (true_val - ensemble_u)**2
 
